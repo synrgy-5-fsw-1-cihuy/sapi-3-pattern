@@ -74,7 +74,7 @@ exports.updateProduct = async (request, response) => {
 // DELETE a product
 exports.deleteProduct = async (request, response) => {
   try {
-    const result = await Car.destroy({ where: { id: request.params.id } });
+    const result = await Product.destroy({ where: { id: request.params.id } });
     if (!result) {
       response.status(404).json({ message: "Car not found" });
       return;
