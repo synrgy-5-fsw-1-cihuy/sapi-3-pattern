@@ -30,4 +30,19 @@ exports.updateProduct = async (request, response) => {
   }
 };
 
+exports.createProduct = async (req, res ) => {
+  try {
+    const { name, description, price } = req.body;
+    if(!name || !description || !price){
+      res.status(404).json({message: "Bad Request"});
+      return;
+    }
+    const result = await Product.create(req.body);
+    res.status(200).json({message: "OK", Data:result});
+  } catch (error) {
+    res.status(500).json({messag: "Internal Server Error"});
+  }
+};
+
+
 // create a method/function to delete a product
