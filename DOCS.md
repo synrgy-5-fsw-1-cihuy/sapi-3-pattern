@@ -1,4 +1,4 @@
-## POST /
+## POST /api/products/
 
 Request Body
 
@@ -26,7 +26,7 @@ Response
 }
 ```
 
-## GET /
+## GET /api/products/
 
 Response
 
@@ -46,7 +46,7 @@ Response
 }
 ```
 
-## GET /:id => 1
+## GET /api/products/:id => 1
 
 Response
 
@@ -64,7 +64,7 @@ Response
 }
 ```
 
-## PUT /:id => 1
+## PUT /api/products/:id => 1
 
 Request Body
 
@@ -82,7 +82,7 @@ Response
 }
 ```
 
-## DELETE /:id => 1
+## DELETE /api/products/:id => 1
 
 Response
 

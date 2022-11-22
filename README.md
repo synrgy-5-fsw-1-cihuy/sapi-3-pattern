@@ -1,3 +1,7 @@
+# Case
+
+Please read [CASE.md](CASE.md)
+
 # Kontribusi
 
 Please read [CONTRIBUTING.md](CONTRIBUTING.md)
