@@ -76,15 +76,15 @@ exports.deleteProduct = async (request, response) => {
   try {
     const result = await Car.destroy({ where: { id: request.params.id } });
     if (!result) {
-      res.status(404).json({ message: "Car not found" });
+      response.status(404).json({ message: "Car not found" });
       return;
     }
 
-    res.json({
+    response.json({
       message: "OK",
     });
   } catch (error) {
     console.error(error);
-    res.status(500).json({ message: "Internal server error" });
+    response.status(500).json({ message: "Internal server error" });
   }
 };
