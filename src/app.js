@@ -25,12 +25,13 @@ const options = {
     },
     servers: [
       {
-        url: "http://localhost:8080/api/",
+        url: "http://localhost:8001/api/",
       },
     ],
   },
-  apis: ["./router/post.router.js"],
+  apis: ["./src/routes/index.js"],
 };
+
 const specs = swaggerJsDoc(options);
 
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(specs));
